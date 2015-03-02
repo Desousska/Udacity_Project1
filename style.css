@@ -1,0 +1,88 @@
+*{
+	background-color: #BBC9D1;
+	font-family: arial;
+	color:#313B46;
+} 
+/*Styling for the heading-bar of the page*/
+.header{
+	text-align: center;
+	background-color: #254D62;
+	color:#E4EBF2;
+	padding:40px;
+	border-radius: 25px;
+	margin-bottom: -8px;
+}	
+/* Styling for the table of contents and content box*/
+.content{
+	padding:15px;
+	display: -webkit-flex;
+	/* -webit-flex; allows for flex to work in Safari browser. 
+	Note that CSS debuggers (http://jigsaw.w3.org/css-validator/) 
+	flag its use with a warning*/
+    display: flex;
+    background-color: #869CAA;
+    margin-top: 20px;
+    border-radius: 15px;
+}
+/*Styling for the table of content's physical layout*/
+.toc{
+	max-width:40%;
+	width:300px;
+	outline:3px solid #3D6177; 
+	text-align: center;
+}
+/*Styling for the content/notes section's physical layout*/
+.notes{
+	width:90%;
+	margin-left:30px;
+	border-radius: 10px;
+}
+/*Styling for the "box" around all of the content for the stage (all sessions), 
+this leaves out the header/stage styling*/
+.notes_content{
+	margin-left: 20px;
+	margin-right:20px;
+}
+/*Styling for the box around each stage (1 through 5)*/
+.notes_stage{
+	outline: 3px solid #3D6177;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+/*Styling of the header section of each notes stage (1 through 5)*/
+.notes_stage_header{
+	text-align:center;
+}
+/*Styling for the session titles (e.g., stage 1, session 1 through 3)*/
+.session_title{
+	text-align: center;
+	padding-top:10px;
+}
+/*Styling for each immediate subsection within a session*/
+.subsection_level1{
+	font-size:1.2em;
+}
+/*Styling for the stage links in the table of contents*/
+a.toc_stage{
+	display: -webkit-flex;
+	display: flex;
+    margin-left:10px;
+    margin-bottom:10px;
+}
+/*Styling for the session list in the table of contents*/
+ul.toc_session{
+	list-style-type: none;
+	max-width:80%;
+}
+/*Styling for the actual links in the session list in the table of contents*/
+a.toc_sessions{
+	margin-left:-60%;
+}
+/*Styles the visited links so that the coloring is chosen*/
+a:visited{
+	color:#254D66;
+}
+/*Styles all p elements in the page*/
+p{
+	margin-left:10px;
+}

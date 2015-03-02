@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<!-- The meta tag declares the character encoding for this HTML document. It was added in order to pass the "Markup Validation" test provided by: http://validator.w3.org/check -->
+		<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+		<title> Intro to Programming Notes</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<h1 class="header"> Notes: Intro to Programming</h1> <!--this creates a "box" at the top of the webpage with the header info-->
+		<div class="content"> <!--This creates a box around all of the content of the page (leaving out the header) -->
+			<div class="toc"> <!--puts a box around the table of contents-->
+				<h2> Table of Contents</h2>
+				<!--Below: table of contents with links to each content section of the page-->
+				<a class="toc_stage" href="#notes_s1">Stage 1</a>
+				<ul class="toc_session">
+					<li>
+						<a href="#s1session_title1" class="toc_sessions" > Work Session 1</a>
+					</li>
+					<li>
+						<a href="#s1session_title2" class="toc_sessions" > Work Session 2</a>
+					</li>
+					<li>
+						<a href="#s1session_title3" class="toc_sessions"> Work Session 3</a>
+					</li>
+				</ul>
+				<a class="toc_stage" href="#notes_s2">Stage 2</a>
+				<a class="toc_stage" href="#notes_s3">Stage 3</a>
+				<a class="toc_stage" href="#notes_s4">Stage 4</a>
+				<a class="toc_stage" href="#notes_s5">Stage 5</a>
+			</div><!-- this closing div closes out the table of contents box-->
+			<div class="notes"><!-- this puts a box around the notes section of the content-->
+				<div class="notes_stage"><!-- puts a box around each stage of the course (1 through 5)-->
+					<h2 class="notes_stage_header" id="notes_header_s1"> Stage 1</h2>
+					<div class="notes_content" id="s1session_content1"><!--the actual notes for the section are within this div-->
+						<h3 class="session_title" id="s1session_title1">Work Session 1: The Basics of the Web and HTML</h3>
+						<p>
+							<b>HTML stands for HyperText Markup Language.</b> HyperText is the content you see on a webpage, and markup refers to how that content appears.
+						</p>
+
+						<p> 
+							<b>Tag: </b> a tag comes in the form of &lt;b&gt;  for opening, and &lt;/b&gt;  for closing. Where "b" in this case, is an instruction that the computer understands to mean "make the font of the text between these tags bold." There are many possible tags, e.g., 'p' for paragraph, or 'br' for linebreak. Note that while most tags require closing tags, some do not (like br, img). One explanation provided for this is that some tags, like img or br do not contain any content, and thus do not need a closing tag to denote where the "ending" is. These are void elements/tags.
+						</p>
+						
+						<p>
+							<b>Element: </b>Within the brackets [ ] is an HTML Element:[&lt;b&gt; content &lt;/b&gt; ]. 
+						</p>
+
+						<p>
+							<b> Attribute: </b> Example: [&lt;a href="http://www.reddit.com"> link &lt;/a>] - href in this example is an Attribute. It is a property of the element. Other attributes could be class, id, alt, title, src, etc.
+						</p>
+						<h4 class="subsection_level1"> Additional info:</h4>
+						<p>
+							In HTML you use:  &lt;!-- ...-->  to comment. Commenting is important because it can explain your choices in your native language, instead of in HTML/a computer's (browser's) language<br>
+
+							'a' stands for anchor<br>
+
+							&lt;img src='url' alt='text'> - the text you write using as the alt attribute is the text that appears when the image doesn't load. So in the exmaple  the word "text" would appear if the image did not load. It is also used as a tool for blind people viewing the webpage. It doesnt need a closing tag because img is a void element. Img is also an inline element<br>
+
+							&lt;span> is an inline element<br>
+							&lt;div> is a block element
+							Both can be used in similar situations, but their usage can depend on how you'd like that element to align. Also, these should only be used when necessary, and other tags such as 'p' or 'h2' should be used when more appropriate.
+						</p>
+					</div><!-- this div closes the notes content box for Stage 1, work session 1-->
+					<div class="notes_content" id="s1session_content2"> <!--opens the content box for stage 1, work session 2-->
+						<h3 class="session_title" id="s1session_title2">Work Session: 2 Creating Structured Documents with HTML</h3>
+						<h4 class="subsection_level1">Boxes:</h4>
+						<p>
+							<em>"Webpages are a bunch of boxes." </em> When you receive a mockup of a site you can take a look and begin cutting up the doc into boxes so that you can translate it to HTML.
+						</p>
+						<h4 class="subsection_level1">HTML's Tree-like Structure:</h4>
+						<p>
+							Since webpages are a bunch of boxes, you can nest smaller boxes within larger boxes.<br>
+
+							You can create your first box (or the trunk) with the opening html tag, then 2 branches with head and body tags. Then, the head and body tags (separated now) can branch off into title, div, or paragraph (p) branches, for example. This continues until you have a "tree" of branches, similar to that of a phylogenetic tree which documents ancestry. <br>
+
+							For ease of viewing, HTML branches are nested beneath their parent branch. This is achieved by tabbing in 1 level when writing code you wish to keep on the branch of the element before it. <br>
+
+							In order to start a new branch you must close the opening tag of the origin of your branch, and all of the open tags within it.  For instance, the title tag, then the head tag can be closed, then the body tag opened, creating a new branch.<br>
+						</p>
+						<h4 class="subsection_level1">Avoiding Repetition</h4>	
+						<p>
+							Since many branches of the HTML tree have similar elements, it is a good idea to give those similar elements matching class attributes in order to group them together. Later, with CSS, the class can be used to style these similar branches all at once, removing a lot of the potential for repetition in CSS.<br>
+
+							To give specific elements unique identifiers you can use ID attributes, and later call them specifically in CSS in case you wish to style that particular branch individually (or even link directly to it).<br>
+							
+							Avoiding repetition is important because it makes styling with CSS much simpler. By minimizing it, you can make site-wide changes with 1 augmentation to the CSS instead of having to make individual changes to each line of code.  It also saves computing power by shortening code, and also makes it much easier for a person to read and debug when looking through the code at a later date. 
+						</p>
+					</div>
+					<div class="notes_content" id="s1session_content3"> 
+						<h3 class="session_title" id="s1session_title3"> Work Session 3: CSS</h3>
+						<h4 class="subsection_level1"> CSS:</h4>
+						<ul> 
+							<li> Cascade: The most specific rule applies</li>
+							<li> Style: Changes affect the look of the page</li>
+							<li> Sheets: You can have any number of CSS sheets</li>
+						</ul>	
+						<h4 class="subsection_level1"> How to approach coding:</h4>
+							<ol>
+								<li> Code </li>
+								<li> Test </li>
+								<li> Refine </li>
+							</ol>
+						<h4 class="subsection_level1"> To start coding in HTML/CSS you should:</h4>
+						<ol> 
+							<li>Boxify: look for natural boxes. You can literally cut up the mock-up page with scissors, or draw boxes around everything </li>
+							<li>Work on Tags: look for repeated styles and semantic elements. Like in this page, there are "stages" which would likely have the same styling and format, so they are likely going to have repetitive coding behind them. So be sure to group these "like-elements" together to avoid repetitive code</li>
+							<li> Write the HTML</li>
+							<li> Apply Styles - from biggest (site-wide) to smallest. Remember that some styles are inherited from parent elements. You can play with developer tools in chrome to determine how styling a particular element will affect the other elements on the page</li>
+							<li> Box sizing. You need to resize boxes in order for them to all fit nicely on the page together. Keep in mind that there are multiple types of devices people use, so compatibility is an important consideration</li>
+							<li> Where to position boxes. Positioning matters, and how you determine the position matters. Be sure that if you use css like "flex" that you include the code required to make it compatible with different browsers.</li>
+							<li> FIX IT!
+								<ul>
+									<li> resize windows</li>
+									<li> try different browser types</li>
+									<li> try it with different devices in varying orientations</li>
+								</ul>
+							</li>	
+						</ol>
+						<h4 class="subsection_level1"> To Write HTML:</h4>
+						<ul>
+							<li> use <a href="http://codepen.io" title="codeopen webpage">Codepen.io</a> for a quick scratch pad that you can share once you have a free account</li>
+							<li> use <a href="http://scratchpad.io" title="scratchpad webpage"> Scratchpad.io</a> it's free, no user account needed. Write code and visualize it immediately</li>
+							<li> use <a href="http://www.sublimetext.com/2" title="sublime text 2 download page"> Sublime Text 2 </a>to write and save code. The drawback is that you have to open the html in your browser to see it. The plus is that it's all saved on your computer so it is more intuitive</li>
+							<li> use your knowledge of tags to create the boxes you defined while boxifying</li>
+							<li> add the content you want to see</li>
+						</ul>
+						<h4 class="subsection_level1"> Applying Style by Writing CSS:</h4>
+						<ul>
+							<li> in CSS, select an element in the following way:<br> 
+								p{ margin: 10px;}
+							</li>
+							<li> select a class using:<br>
+							.description{ color: blue;}
+							</li>
+							<li> select an ID using: <br>
+							#price{ color: green;}
+							</li>
+						</ul>
+						<p> Note that in the previous examples, {color: green;}, {color:blue;} or {margin:10px;} are rules. While p, .description, #price are selectors. Color or margin are properties and green, 10px, and blue are values
+						</p>
+						<h4 class="subsection_level1"> Box Model &amp; Sizing:</h4>
+						<p>The computed area of an element (i.e., its size) is measured as the sum of the border, padding, and content of the element. <br><br>
+						Because this makes knowing the exact size an element will take up on a page difficult (you would have to add all of the above values everytime you change an element's size) use the following format in CSS:<br>
+						*{<br> box-sizing:border-box;<br>}</p>
+
+						<p> An important consideration with this is that it is a relatively new way to deal with "boxes" thus it can lead to difficulties when someone is using an old browser. To combat this, you have to add browser specific prefixes. You add these before the attribute, like this:<br>
+						*{<br>
+						-webkit-box-sizing:border-box;<br>
+						-moz-box-sizing:border-box;<br>
+						-ms-box-sizing:border-box;<br>
+						box-sizing:border-box<br>}
+						</p> 
+
+						<p> You can also set sizes of boxes in terms of percents instead of pixels, to assist in making sizing on the page easier</p>	
+
+						<h4 class="subsection_level1"> Box Positioning:</h4>
+						<p>Divs are by default block elements. To make a div fall inline (beside another "box") you can use the CSS rule: <br>
+						{display: flex;}<br>
+						Use: 	display: -webkit-flex; in order to have this work in Safari browsers. <br>
+						For a full guide to the flex value follow this <a href="http://css-tricks.com/snippets/css/a-guide-to-flexbox/" title="guide to flex value">link</a>. 
+						</p>	
+						<h4 class="subsection_level1"> Fixing code:</h4>
+						<p> 
+						 	<b>How to comment:</b> In CSS,to comment you use:/*...*/<br>
+							It is important to add comments because it allows you to easily see "why" you chose to do something in your code, which makes debugging it easier. You take the 'code' and elaborate on it using words and descriptions such that it is understandable to an english speaker - and not just to a computer. 
+						</p>
+						<p>
+							<b>Debugging:</b> You can use programs to point out flaws in your code, such as open tags or invalid structuring<br>
+							<b>HTML Debugger:</b><a href="http://validator.w3.org/" title="HTML Debugger Webiste"> http://validator.w3.org/</a>. This site allows you to submit your HTML and issues in formatting (e.g., unclosed tags) will be flagged so you can correct them.<br>
+							<b> CSS Debugger:</b><a href="http://jigsaw.w3.org/css-validator/#validate_by_input" title="CSS Debugger Website"> http://jigsaw.w3.org/css-validator/#validate_by_input</a>. This allows you to do the same for CSS. 
+						</p>
+					</div>	
+				</div>
+				<!-- These sections will be worked on in the future --> 
+				<div class="notes_stage">
+					<h2 class="notes_stage_header" id="notes_s2"> Stage 2</h2>
+				</div>
+				<div class="notes_stage">
+					<h2 class="notes_stage_header" id="notes_s3"> Stage 3</h2>
+				</div>
+				<div class="notes_stage">
+					<h2 class="notes_stage_header" id="notes_s4"> Stage 4</h2>
+				</div>
+				<div class="notes_stage">
+					<h2 class="notes_stage_header" id="notes_s5"> Stage 5</h2>
+				</div>
+			</div>
+		</div>
+	</body>
+</html>
+<!-- Thanks for reading through my first actual bit of code! I apprecaite it!!--> 
